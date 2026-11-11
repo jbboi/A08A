@@ -1,0 +1,103 @@
+:root {
+    --accent-color: #800000;
+    --text-color: #333;
+}
+
+* { box-sizing: border-box; }
+
+/* Step 16: fluid page */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    width: 80%;
+    max-width: 1024px;
+    margin: 0 auto;
+    font-size: calc(90% + .2vw);
+    line-height: 1.5;
+}
+
+/* Step 16: padding changed to .25em */
+h1, h2, h3, p, ul {
+    margin: 0;
+    padding: .25em 0;
+}
+h1, h2 { color: var(--accent-color); }
+h3 { color: black; }
+a { color: var(--accent-color); }
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    line-height: 1.2;                 /* Step 16 */
+    border-bottom: 2px solid var(--accent-color);
+    padding: .5em 0;
+
+    img { width: 100%; min-width: 40px; max-width: 80px; }   /* Step 17: logo */
+    h1 { font-size: 1.8em; padding: 0; }
+    p  { padding: 0; font-style: italic; }
+}
+
+/* Step 9: two-column flexbox */
+main {
+    display: flex;
+    margin-top: 1em;
+}
+
+/* Step 10: aside 25% */
+aside {
+    flex-basis: 25%;
+    padding-right: 1em;
+
+    h2 { font-size: 1.2em; }
+    h3 { padding-bottom: 0; }
+    a  { display: block; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img {                              /* Step 17: guest speaker images */
+        width: 100%;
+        min-width: 40px;
+        max-width: 75px;
+        display: block;
+        margin: .25em 0 1em;
+    }
+}
+
+/* Step 10: section 75% */
+section {
+    flex-basis: 75%;
+    padding-left: 1em;
+
+    blockquote { margin: .5em 2em; font-style: italic; }
+
+    img {                              /* Step 14: float right; Step 17 sizes */
+        float: right;
+        width: 100%;
+        min-width: 100px;
+        max-width: 250px;
+        margin: 0 0 .5em 1em;
+    }
+}
+
+/* Steps 12-13: featured class with the borders */
+.featured {
+    border-top: 2px solid var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+    margin: .5em 0 1em;
+    padding: .5em 0;
+    overflow: auto;
+}
+
+/* Exercise 6-2, steps 4-5 */
+.speaker {
+    h1 { color: var(--accent-color); }
+    h2 { color: black; }
+    p  { padding-top: .5em; padding-bottom: .5em; }
+}
+
+footer {
+    border-top: 2px solid var(--accent-color);
+    margin-top: 1em;
+    padding: .5em 0;
+    font-size: .85em;
+    text-align: center;
+}
